@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-bg: #0c0c0c;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+@layer components {
+  .bar-row {
+    @apply w-6 mt-1 h-1 bg-white;
+  }
+  .navbar-overlay {
+    @apply w-screen h-full animate-overlay  bg-black/90 fixed top-0 left-0 z-20;
+  }
+  .navbar-overlay-layout {
+    @apply grid place-content-center;
+  }
+  .custom-button {
+    @apply px-4 py-2 bg-mainText z-10 hover:text-mainText border border-mainText relative;
+  }
+  .custom-button-before {
+    @apply before:content-[''] before:absolute before:left-0 before:top-0 before:w-0 before:h-full before:bg-black before:transition-all before:duration-500 before:-z-10 hover:before:w-full;
+  }
+  .custom-button-bg-effect {
+    @apply hover:bg-black transition-colors duration-500;
+  }
+  .right-arrow-wrapper {
+    @apply absolute w-8 h-8 bg-white bottom-10 left-14 z-10 flex items-center hover:bg-black;
+  }
+  .left-arrow-wrapper {
+    @apply absolute w-8 h-8 bg-white bottom-10 left-5 z-10 flex items-center justify-center hover:bg-black;
+  }
+  .menu_ul_li {
+    @apply text-3xl font-primary cursor-pointer w-fit relative;
+  }
+  .menu_ul_li_before {
+    @apply before:content-[''] before:absolute before:-bottom-0  before:h-1 before:animate-increase before:bg-white;
+  }
+}
