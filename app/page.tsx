@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import { About, Booking, Chef, Landing, Menu, Video } from "./component";
-import Delay from "./component/Delay";
+import { About, Booking, Chef, Delay, Landing, Menu, Video } from "./component";
 
 async function Home() {
   await new Promise((resolve) => setTimeout(resolve, 3000));

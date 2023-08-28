@@ -8,6 +8,7 @@ import Booking from "./booking/Booking";
 import Menu from "./menu/Menu";
 import Chef from "./chef/Chef";
 import Video from "./vido/Video";
+import Delay from "./Delay";
 export {
   FinalLinks,
   Landing,
@@ -19,4 +20,5 @@ export {
   Menu,
   Chef,
   Video,
+  Delay,
 };
