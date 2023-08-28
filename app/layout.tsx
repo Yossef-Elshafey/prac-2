@@ -1,8 +1,6 @@
 import "./globals.css";
 import Navbar from "./component/navbar/Navbar";
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Suspense fallback={<Loading />}>
-          <Navbar />
-          {children}
-        </Suspense>
+        <Navbar />
+        {children}
       </body>
     </html>
   );

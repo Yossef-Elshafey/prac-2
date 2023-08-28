@@ -1,21 +1,22 @@
+import { Suspense } from "react";
 import { About, Booking, Chef, Landing, Menu, Video } from "./component";
 
-export default async function Home() {
-  await new Promise((resolve: any) => {
-    // delay loading
-    setTimeout(() => {
-      resolve();
-    }, 2000);
-  });
-
+async function Home() {
   return (
-    <main className="">
-      <Landing />
-      <About />
-      <Booking />
-      <Menu />
-      <Chef />
-      <Video />
-    </main>
+    <>
+      <main className="">
+        <Landing />
+        <About />
+        <Booking />
+        <Menu />
+        <Chef />
+        <Video />
+      </main>
+    </>
   );
+}
+
+export default async function Root() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return <Home />;
 }

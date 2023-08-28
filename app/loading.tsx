@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
 
-function Loading() {
+export default function Loading() {
   return (
     <div className="absolute left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2 ">
       <Image
@@ -15,5 +14,3 @@ function Loading() {
     </div>
   );
 }
-
-export default Loading;
